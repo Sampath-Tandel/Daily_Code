@@ -8,20 +8,17 @@ public class printNumbers {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a number :");
         int n = sc.nextInt();
-        int count = 1;
-        print(n, count);
+        print(n);
 
     }
 
-    static void print(int n, int count) {
-        if (count == n){
-        System.out.println(count);
+    static void print(int n) {
+        if (n == 0) {
             return;
-        }
-        else{
-            System.out.println(count);
-        count++;
-        print(n, count);
+        } else {
+
+            print(n - 1);
+            System.out.println(n);
         }
     }
 }
